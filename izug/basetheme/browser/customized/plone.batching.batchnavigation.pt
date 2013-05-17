@@ -1,0 +1,67 @@
+<!-- Navigation -->
+<tal:batchnavigation define="batch view/batch|nothing;"
+                   condition="batch"
+                   metal:define-macro="navigation"
+                   >
+<div class="listingBar"
+     i18n:domain="plone"
+     tal:condition="batch/multiple_pages">
+
+    <!-- Link to first -->
+    <span>
+        <a href="" tal:attributes="href python:view.make_link(1)">&laquo;</a>
+    </span>
+
+    <!-- Link to previous -->
+    <span class="previous">
+        <a href=""
+           tal:condition="batch/has_previous" 
+           tal:attributes="href python:view.make_link(batch.previouspage)">
+           &lsaquo;
+        </a>
+        <a href=""
+           tal:condition="not: batch/has_previous" name="previous">
+           &lsaquo;
+        </a>
+    </span>
+
+    <!-- Pagelist with links to previous pages for quick navigation -->
+    <span tal:repeat="pagenumber batch/previous_pages">
+      <a href=""
+         tal:content="pagenumber" 
+         tal:attributes="href python:view.make_link(pagenumber)"/>
+    </span>
+
+    <!-- Current page -->
+    <span tal:condition="batch/navlist"
+          tal:omit-tag="">
+        <span tal:content="batch/pagenumber" class="current">Current page number</span>
+    </span>
+
+    <!-- Pagelist with links to next pages for quick navigation -->
+    <span tal:repeat="pagenumber batch/next_pages">
+      <a href=""
+         tal:content="pagenumber" 
+         tal:attributes="href python:view.make_link(pagenumber)"/>
+    </span>
+
+    <!-- Link to next -->
+        <span class="next">
+        <a href=""
+           tal:condition="batch/has_next" 
+           tal:attributes="href python:view.make_link(batch.nextpage)">
+           &rsaquo;
+        </a>
+        <a href=""
+           tal:condition="not: batch/has_next">
+           &rsaquo;
+        </a>
+    </span>
+
+    <!-- Link to last -->
+    <span class="last">
+        <a href=""
+           tal:attributes="href python:view.make_link(batch.lastpage)">&raquo;</a>
+    </span>
+</div>
+</tal:batchnavigation>
