@@ -28,7 +28,7 @@
   <layer name="izug_basetheme_icons"
      insert-after="izug_basetheme_styles"/>
   <layer name="izug_basetheme_openlayers"
-     insert-after="izug_basetheme_icons"/>
+     insert-before="geo_openlayers"/>
  </skin-path>
 
 </object>
