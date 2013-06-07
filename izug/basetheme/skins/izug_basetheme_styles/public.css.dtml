@@ -1129,7 +1129,7 @@ a[target=_blank] {
     padding: 1px 0px 1px 16px;
 }
 #content span.link-webcal a {
-    background: transparent url(&dtml-portal_url;/event_icon.gif) 0px 1px no-repeat;
+    background: transparent url(&dtml-portal_url;/event_icon.png) 0px 1px no-repeat;
     padding: 1px 0px 1px 16px;
 }
 #content span.link-feed a {
