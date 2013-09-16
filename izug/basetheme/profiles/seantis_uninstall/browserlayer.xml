@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+    <layer name="izug.basetheme.zug" remove="True"/>
+    <layer name="izug.basetheme.izug" remove="True"/>
+    <layer name="izug.basetheme.izug4" remove="True"/>
+    <layer name="izug.basetheme.directories" remove="True"/>
+</layers>
