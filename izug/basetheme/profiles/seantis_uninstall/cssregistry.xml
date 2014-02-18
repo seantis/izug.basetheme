@@ -14,5 +14,18 @@
   <stylesheet title="" cacheable="True" compression="safe"
      conditionalcomment="" cookable="True" enabled="on" expression=""
      id="directories.css" media="screen" rel="stylesheet" rendering="import" remove="True"/>
+  <stylesheet title="" cacheable="True" compression="safe"
+     conditionalcomment="" cookable="True" enabled="on" expression=""
+     id="directories.css" media="screen" rel="stylesheet" rendering="import" remove="True"/>
+  
+  <stylesheet id="++resource++seantis.reservation.css/izug/report.css" 
+      remove="True"
+  />    
+  <stylesheet id="++resource++seantis.reservation.css/izug/resource.css" 
+      remove="True"
+  />    
+  <stylesheet id="++resource++seantis.reservation.css/izug/overview.css" 
+      remove="True"
+  />
 </object>
 
